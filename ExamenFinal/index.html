@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="inscription.js"></script>
+    <title>ExamenFinal</title>
+</head>
+<body>
+
+    <h1>Inscription</h1>
+    <form>
+        <fieldset name="Coordonnées">
+            <legend>Vos Coordonnées</legend>
+            <label>Nom :<input type="text" placeholder="votre nom" name="Nom" required="required"></label><br>
+            <label>Prénom :<input type="text" placeholder="votre prénom" name="Prenom" required="required"></label><br>
+            <label>Date de naissance :<input type="date" name="Naissance" required="required"></label><br>
+            <label>Mail :<input type="email" placeholder="votre mail" name="Mail" required="required"></label><br>
+            <label>Votre site :<input type="url" name="Site" required="required"></label><br>
+            <label>Code :<input type="password" placeholder="password" name="Password" required="required"></label><br>
+            <label>Genre : 
+                <input type="radio" name="Genre" value="homme" required="required"> Homme
+                <input type="radio" name="Genre" value="femme" required="required"> Femme
+            </label> <br>
+
+            <label for="Pays">Pays : </label>
+            <select name="Pays" id="Pays" required="required">
+                <option value="" disabled selected>Votre Pays</option>
+                <optgroup label="Afrique">
+                    <option value="Tunis">Tunis</option>
+                    <option value="Algérie">Algérie</option>
+                    <option value="Maroc">Maroc</option>
+                    <option value="Mauritanie">Mauritanie</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="France">France</option>
+                    <option value="Belgique">Belgique</option>
+                    <option value="Italie">Italie</option>
+                    <option value="Allemagne">Allemagne</option>
+                </optgroup>
+                <optgroup label="Amérique">
+                    <option value="Canada">Canada</option>
+                    <option value="EtatUnis">États-Unis</option>
+                    <option value="Italie">Italie</option>
+                    <option value="Allemagne">Allemagne</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset name="Formations">
+            <legend>Vos formations</legend>
+            <label>
+                <input type="checkbox" name="formations" value="HTML5"> Formation en HTML5 <br>
+                <input type="checkbox" name="formations" value="CSS3"> Formation en CSS3 <br>
+                <input type="checkbox" name="formations" value="JS"> Formation en JS <br>
+            </label>
+            <textarea name="description" placeholder="Décrivez vos besoins en formation." required="required"></textarea>
+        </fieldset>
+
+        <fieldset name="Photo">
+            <legend>Envoyez nous votre photo</legend>
+            <label>
+                <input type="file" name="image" required="required">
+            </label> <br> <br>
+
+            <button type="reset">Effacer</button>
+            <button type="submit" onClick="Verif();">Envoyer</button>
+            
+        </fieldset>
+    </form>
+    
+</body>
+</html>
